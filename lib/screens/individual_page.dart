@@ -2,6 +2,8 @@ import 'package:emoji_picker/emoji_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
+import 'package:whatsapp_clone/CustomUI/own_message_card.dart';
+import 'package:whatsapp_clone/CustomUI/reply_card.dart';
 import 'package:whatsapp_clone/model/chat_model.dart';
 import 'package:whatsapp_clone/model/message_model.dart';
 
