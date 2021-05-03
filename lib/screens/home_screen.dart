@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/model/chat_model.dart';
+import 'package:whatsapp_clone/pages/camera_page.dart';
+import 'package:whatsapp_clone/pages/chat_page.dart';
 
-class Homescreen extends StatefulWidget {
-  // Homescreen({Key key, this.chatmodels, this.sourchat}) : super(key: key);
-  // final List<ChatModel> chatmodels;
-  // final ChatModel sourchat;
+class HomeScreen extends StatefulWidget {
+  HomeScreen({Key key, this.chatModels, this.sourceChat}) : super(key: key);
+  final List<ChatModel> chatModels;
+  final ChatModel sourceChat;
 
   @override
-  _HomescreenState createState() => _HomescreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomescreenState extends State<Homescreen> with SingleTickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
   TabController _controller;
 
   @override
@@ -79,7 +82,7 @@ class _HomescreenState extends State<Homescreen> with SingleTickerProviderStateM
         children: [
           CameraPage(),
           ChatPage(
-            chatmodels: widget.chatmodels,
+            chatModels: widget.chatModels,
             sourceChat: widget.sourceChat,
           ),
           Text("STATUS"),
